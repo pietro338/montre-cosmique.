@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Montre Cosmique – Accueil</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;font-family:'Orbitron',sans-serif;
+display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+background:#000;color:#66fcf1;overflow:hidden}
+body::before{content:"";position:fixed;inset:0;
+background:url('F3D9E226-07F5-4020-998C-557840290D8A.jpeg') center/cover no-repeat;
+opacity:.25;filter:brightness(.5);z-index:-1}
+.logo{width:320px;margin-bottom:2rem;filter:drop-shadow(0 0 12px #ffcc33)}
+h1{margin:.2rem 0 1rem;font-size:3.5rem;color:#ffcc33;text-shadow:0 0 15px #ffcc33,0 0 30px #ffcc33}
+p{margin:0 0 2rem;font-size:1.4rem}
+button{padding:1rem 3rem;font-size:1.2rem;border-radius:40px;border:2px solid #66fcf1;
+background:transparent;color:#66fcf1;cursor:pointer;transition:.3s;box-shadow:0 0 10px #66fcf1}
+button:hover{background:#66fcf1;color:#000}
+.spiral{animation:spin 1.4s forwards}@keyframes spin{to{transform:scale(0) rotate(720deg);opacity:0}}
+</style></head><body>
+<img src="141F3962-C823-46F2-BCF0-122DB7405334.jpeg" alt="Logo MAYA GALAXIS" class="logo">
+<h1>Montre Cosmique</h1><p>Le temps sacré révélé par la mécanique céleste</p>
+<button id="enter">Entrer</button>
+<script>
+document.getElementById('enter').onclick=()=>{
+ const ok=prompt('Mot de passe requis :');if(ok==='KATUN XIII'){
+  document.getElementById('enter').classList.add('spiral');
+  setTimeout(()=>location.href='presentation.html',1400);
+ }else alert('Mot de passe incorrect');
+};
+</script></body></html>
